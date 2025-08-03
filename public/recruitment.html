@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>招新报名 - 信息学院新闻中心</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 配置Tailwind自定义主题 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#165DFF',
+            secondary: '#0E42C2',
+            accent: '#E8F3FF',
+            dark: '#1D2939',
+            light: '#F9FAFB'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-light text-dark">
+  <!-- 头部区域 -->
+  <header class="bg-gradient-to-r from-primary to-secondary text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold">信息学院新闻中心</h1>
+      <p class="mt-2 opacity-90">记录校园点滴，传播信院声音，展现青春风采</p>
+    </div>
+  </header>
+
+  <!-- 导航栏 -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-center">
+        <ul class="flex flex-wrap text-sm md:text-base">
+          <li><a href="index.html" class="block py-4 px-5 text-gray-600 hover:text-primary transition-colors">首页</a>
+          </li>
+          <li><a href="departments.html"
+              class="block py-4 px-5 text-gray-600 hover:text-primary transition-colors">部门介绍</a></li>
+          <li><a href="recruitment.html"
+              class="block py-4 px-5 text-primary border-b-2 border-primary font-medium">招新报名</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 招新报名内容 -->
+  <section class="py-16 bg-accent">
+    <div class="container mx-auto px-4">
+      <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-center mb-4 text-dark">
+        加入我们，共创精彩
+      </h2>
+      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+        无论你擅长写作、摄影、设计还是视频剪辑，这里都有适合你的舞台。填写下方表单，加入新闻中心大家庭！
+      </p>
+
+      <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-8">
+        <form id="recruitmentForm" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-gray-700 font-medium mb-2">姓名 <span
+                  class="text-red-500">*</span></label>
+              <input type="text" id="name" name="name" required
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
+            </div>
+            <div>
+              <label for="studentId" class="block text-gray-700 font-medium mb-2">学号 <span
+                  class="text-red-500">*</span></label>
+              <input type="text" id="studentId" name="studentId" required
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="major" class="block text-gray-700 font-medium mb-2">专业班级 <span
+                  class="text-red-500">*</span></label>
+              <input type="text" id="major" name="major" required
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
+            </div>
+            <div>
+              <label for="phone" class="block text-gray-700 font-medium mb-2">联系电话 <span
+                  class="text-red-500">*</span></label>
+              <input type="tel" id="phone" name="phone" required
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
+            </div>
+          </div>
+
+          <div>
+            <label for="department" class="block text-gray-700 font-medium mb-2">意向部门 <span
+                class="text-red-500">*</span></label>
+            <select id="department" name="department" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
+              <option value="">请选择意向部门</option>
+              <option value="network">网络部</option>
+              <option value="photography">摄影部</option>
+              <option value="editorial">编辑部</option>
+              <option value="editing">剪辑部</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="secondDepartment" class="block text-gray-700 font-medium mb-2">第二意向部门</label>
+            <select id="secondDepartment" name="secondDepartment"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
+              <option value="">无</option>
+              <option value="network">网络部</option>
+              <option value="photography">摄影部</option>
+              <option value="editorial">编辑部</option>
+              <option value="editing">剪辑部</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="experience" class="block text-gray-700 font-medium mb-2">相关经验或特长</label>
+            <textarea id="experience" name="experience" rows="3"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+              placeholder="请简要描述你的相关经验或特长，如：会使用PS、有摄影经验等"></textarea>
+          </div>
+
+          <div>
+            <label for="reason" class="block text-gray-700 font-medium mb-2">加入理由 <span
+                class="text-red-500">*</span></label>
+            <textarea id="reason" name="reason" rows="3" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+              placeholder="请说明你想加入新闻中心的理由"></textarea>
+          </div>
+
+          <div class="pt-4">
+            <button type="submit"
+              class="w-full bg-primary text-white py-3 px-6 rounded-full font-semibold hover:bg-secondary transition-colors flex items-center justify-center">
+              <i class="fas fa-paper-plane mr-2"></i> 提交报名
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="max-w-2xl mx-auto mt-10 bg-white rounded-xl p-6 shadow-md">
+        <h3 class="text-lg font-bold mb-4 text-primary flex items-center">
+          <i class="fas fa-info-circle mr-2"></i> 招新说明
+        </h3>
+        <ul class="text-gray-600 space-y-2">
+          <li><i class="fas fa-angle-right text-primary mr-2"></i> 招新对象：信息学院大一新生❤</li>
+          <li><i class="fas fa-angle-right text-primary mr-2"></i> 报名截止日期：暂定</li>
+          <li><i class="fas fa-angle-right text-primary mr-2"></i> 面试时间：暂定（具体时间将短信通知）</li>
+          <li><i class="fas fa-angle-right text-primary mr-2"></i> 咨询方式：2065216811@qq.com</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white py-10">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h3 class="text-xl font-bold mb-4">信息学院新闻中心</h3>
+        <p class="text-gray-400 mb-6 max-w-lg mx-auto">
+          记录校园点滴，传播信院声音，展现青春风采
+        </p>
+        <div class="border-t border-gray-700 pt-6">
+          <p class="text-gray-400 text-sm">
+            © 2023 信息学院新闻中心 版权所有 | 招新咨询热线：13800138000
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部按钮 -->
+  <button id="scrollTopBtn"
+    class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 z-50">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // 表单提交处理
+    document.getElementById('recruitmentForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+
+      // 收集表单数据
+      const formData = {
+        name: document.getElementById('name').value,
+        studentId: document.getElementById('studentId').value,
+        major: document.getElementById('major').value,
+        phone: document.getElementById('phone').value,
+        department: document.getElementById('department').value,
+        secondDepartment: document.getElementById('secondDepartment').value,
+        experience: document.getElementById('experience').value,
+        reason: document.getElementById('reason').value
+      };
+
+      try {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> 提交中...';
+
+        // 发送请求到后端API
+        const response = await fetch('/api/apply', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          alert('报名成功！我们会尽快与你联系，请保持手机畅通。');
+          this.reset();
+        } else {
+          alert('提交失败失败：' + result.message);
+        }
+      } catch (error) {
+        alert('网络错误，请稍后再试');
+        console.error(error);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
+    });
+
+    // 回到顶部按钮
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.remove('opacity-0', 'invisible');
+        scrollTopBtn.classList.add('opacity-100', 'visible');
+      } else {
+        scrollTopBtn.classList.remove('opacity-100', 'visible');
+        scrollTopBtn.classList.add('opacity-0', 'invisible');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+
+</html>
