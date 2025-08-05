@@ -2,27 +2,37 @@ const { MongoClient } = require('mongodb');
 
 // 从环境变量获取连接地址
 const MONGODB_URI = process.env.MONGODB_URI;
+
+// 增加环境变量检查的详细日志
 if (!MONGODB_URI) {
-  throw new Error('请在.env文件中配置MONGODB_URI环境变量');
+  console.error('❌ MONGODB_URI 环境变量未配置！');
+  throw new Error('请配置 MONGODB_URI 环境变量');
+} else {
+  // 只打印协议部分，避免泄露密码
+  const uriStart = MONGODB_URI.split('://')[0] + '://[隐藏的凭据]@' + MONGODB_URI.split('@')[1];
+  console.log('📌 正在使用的 MongoDB 连接协议:', uriStart);
 }
 
-// 单例模式：缓存数据库连接实例
 let dbInstance = null;
 
 async function connectDB() {
-  // 如果已连接，直接返回实例
   if (dbInstance) {
     return dbInstance;
   }
 
   try {
-    const client = await MongoClient.connect(MONGODB_URI);
-    console.log('✅ 成功连接到MongoDB数据库');
-    dbInstance = client.db(); // 存储数据库实例
+    console.log('🔗 开始连接 MongoDB...');
+    const client = await MongoClient.connect(MONGODB_URI, {
+      // 增加连接超时和重试配置，适应云环境
+      serverSelectionTimeoutMS: 5000, // 5秒超时
+      retryWrites: true
+    });
+    console.log('✅ 成功连接到 MongoDB');
+    dbInstance = client.db();
     return dbInstance;
   } catch (error) {
-    console.error('❌ 数据库连接失败:', error.message);
-    throw error; // 抛出错误给上层处理
+    console.error('❌ 数据库连接失败（详细信息）:', error); // 打印完整错误
+    throw error;
   }
 }
 
