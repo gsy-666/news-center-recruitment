@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>剪辑部 - 信息学院新闻中心</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 配置Tailwind自定义主题 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#165DFF',
+            secondary: '#0E42C2',
+            accent: '#E8F3FF',
+            dark: '#1D2939',
+            light: '#F9FAFB'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-light text-dark">
+  <!-- 头部区域 -->
+  <header class="bg-gradient-to-r from-primary to-secondary text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold">信息学院新闻中心</h1>
+      <p class="mt-2 opacity-90">记录校园点滴，传播信院声音，展现青春风采</p>
+    </div>
+  </header>
+
+  <!-- 导航栏 -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-center">
+        <ul class="flex flex-wrap text-sm md:text-base">
+          <li><a href="index.html" class="block py-4 px-5 text-gray-600 hover:text-primary transition-colors">首页</a>
+          </li>
+          <li><a href="departments.html"
+              class="block py-4 px-5 text-primary border-b-2 border-primary font-medium">部门介绍</a></li>
+          <li><a href="events.html" class="block py-4 px-5 text-gray-600 hover:text-primary transition-colors">往期活动</a>
+          </li>
+          <li><a href="recruitment.html"
+              class="block py-4 px-5 text-gray-600 hover:text-primary transition-colors">招新报名</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 部门详情内容 -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <!-- 返回按钮 -->
+      <a href="departments.html"
+        class="inline-flex items-center text-primary hover:text-secondary transition-colors mb-8">
+        <i class="fas fa-arrow-left mr-2"></i> 返回部门列表
+      </a>
+
+      <!-- 部门标题 -->
+      <div class="text-center mb-12">
+        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-video text-primary text-5xl"></i>
+        </div>
+        <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark">剪辑部</h2>
+        <p class="text-gray-500 mt-2">用画面讲述故事，用创意点亮瞬间</p>
+      </div>
+
+      <!-- 部门详情 -->
+      <div class="bg-white rounded-xl shadow-md p-8 mb-10">
+        <h3 class="text-xl font-bold mb-4 text-primary flex items-center">
+          <i class="fas fa-info-circle mr-2"></i> 部门简介
+        </h3>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          剪辑部是新闻中心的视频制作核心，负责校园活动、专题报道、宣传短片等各类视频内容的拍摄与后期制作。我们将碎片化的镜头素材，通过创意剪辑和特效包装，打造成富有故事性和感染力的视频作品。
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          从前期策划、拍摄到后期剪辑、调色、配乐，剪辑部完成视频创作的全流程工作。我们紧跟视频传播趋势，探索创新的表现形式，让学院的宣传内容更生动、更具吸引力，在视觉传播中抢占先机。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+        <!-- 学习内容 -->
+        <div class="bg-white rounded-xl shadow-md p-8">
+          <h3 class="text-xl font-bold mb-4 text-primary flex items-center">
+            <i class="fas fa-graduation-cap mr-2"></i> 你将学到
+          </h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+              <span>视频剪辑软件操作：Premiere Pro、剪映等专业工具的使用技巧</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+              <span>后期制作：调色、字幕、转场、特效等专业处理方法</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+              <span>短视频创作：脚本策划、节奏把控、创意表现等新媒体技能</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 招募要求 -->
+        <div class="bg-white rounded-xl shadow-md p-8">
+          <h3 class="text-xl font-bold mb-4 text-primary flex items-center">
+            <i class="fas fa-user-check mr-2"></i> 我们需要这样的你
+          </h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-angle-right text-primary mt-1 mr-3"></i>
+              <span>对视频制作有浓厚兴趣，关注短视频平台流行趋势</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-angle-right text-primary mt-1 mr-3"></i>
+              <span>有耐心和细致的态度，能专注完成后期剪辑工作</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-angle-right text-primary mt-1 mr-3"></i>
+              <span>具备一定的审美能力和创意构思能力</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-angle-right text-primary mt-1 mr-3"></i>
+              <span>会使用剪辑软件者优先，零基础但学习意愿强者也可报名</span>
+            </li>
+            <li class="flex items-start">
+          </ul>
+        </div>
+      </div>
+
+      <!-- 部门活动展示 -->
+      <div class="bg-white rounded-xl shadow-md p-8 mb-10">
+        <h3 class="text-xl font-bold mb-6 text-primary flex items-center">
+          <i class="fas fa-images mr-2"></i> 部门活动展示
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <img src="./information/PRpng.png" alt="剪辑部活动照片" class="w-full h-48 object-cover">
+            <p class="p-3 text-center text-gray-600 text-sm">Premiere剪辑技巧培训</p>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <img src="./information/AE.png" alt=" 剪辑部活动照片" class="w-full h-48 object-cover">
+            <p class="p-3 text-center text-gray-600 text-sm">Adobe After Effects培训</p>
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <img src="./information/jy.png" alt="剪辑部活动照片" class="w-full h-48 object-cover">
+            <p class="p-3 text-center text-gray-600 text-sm">短视频创意工作坊</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 剪辑部负责人（修改后） -->
+      <div class="bg-white rounded-xl shadow-md p-8 mb-10">
+        <h3 class="text-xl font-bold mb-6 text-primary flex items-center">
+          <i class="fas fa-user-tie mr-2"></i> 部门负责人
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-20 h-20 rounded-full overflow-hidden mb-3">
+              <img src="./image_head/mgy.jpg" alt="马贵洋" class="w-full h-full object-cover">
+            </div>
+            <h4 class="text-base font-semibold">马贵洋 - 部长</h4>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="w-20 h-20 rounded-full overflow-hidden mb-3">
+              <img src="./image_head/ljq.jpg" alt="李家琦" class="w-full h-full object-cover">
+            </div>
+            <h4 class="text-base font-semibold">李家琦 - 副部长</h4>
+          </div>
+          <div class="flex flex-col items-center text-center">
+            <div class="w-20 h-20 rounded-full overflow-hidden mb-3">
+              <img src="./image_head/bjh.jpg" alt="白家赫" class="w-full h-full object-cover">
+            </div>
+            <h4 class="text-base font-semibold">白家赫 - 副部长</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- 报名按钮 -->
+      <div class="text-center">
+        <a href="recruitment.html"
+          class="bg-primary text-white px-8 py-3 rounded-full font-semibold inline-flex items-center shadow-lg hover:bg-secondary transition-all duration-300">
+          <i class="fas fa-paper-plane mr-2"></i> 加入剪辑部，用画面讲述故事
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white py-10">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h3 class="text-xl font-bold mb-4">信息学院新闻中心</h3>
+        <p class="text-gray-400 mb-6 max-w-lg mx-auto">
+          记录校园点滴，传播信院声音，展现青春风采
+        </p>
+        <div class="border-t border-gray-700 pt-6">
+          <p class="text-gray-400 text-sm">
+            © 2023 信息学院新闻中心 版权所有 | 招新咨询:2065216811@qq.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部按钮 -->
+  <button id="scrollTopBtn"
+    class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 z-50">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // 回到顶部按钮
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.remove('opacity-0', 'invisible');
+        scrollTopBtn.classList.add('opacity-100', 'visible');
+      } else {
+        scrollTopBtn.classList.remove('opacity-100', 'visible');
+        scrollTopBtn.classList.add('opacity-0', 'invisible');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+
+</html>
